@@ -33,22 +33,6 @@ window.watsonAssistantChatOptions = {
         // The instance returned here has many methods on it that are documented on this page. You can assign it to any
         // global window variable you like if you need to access it in other functions in your application. This instance
         // is also passed as an argument to all event handlers when web chat fires an event.
-        function receive(event) {
-          var contactNumber =
-            event.data.context.skills["main skill"].user_defined.contactNumber;
-
-
-          if (contactNumber != "") {
-           // document.getElementById("background").style.display = "none";
-           // document.getElementById("wa-output-summ-title").innerHTML =
-           //   "<b>Summary</b>";
-            document.getElementById("about-section").click();
-          }
-    
-
-        }
-    
-        instance.on({ type: "receive", handler: receive });
         await instance.render();
      }
   };
