@@ -12,6 +12,8 @@
         <!-- App Css-->
         <link href="./assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="./assets/css/customAssistant.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="./assets/library/bootstrap-table/bootstrap-table.min.css">
+
     </head>
 
   <body>
@@ -359,54 +361,22 @@
 
                                         <div class="row align-items-center">
                                             <div class="col-xl-12">
-                                                <div>
-                                                    <table class="table table-bordered">
-                                                        <thead>
-                                                          <tr>
-                                                            <th scope="col">PO</th>
-                                                            <th scope="col">SO</th>
-                                                            <th scope="col">PN</th>
-                                                            <th scope="col">Qty</th>
-                                                            <th scope="col">Prev ESD</th>
-                                                            <th scope="col">New ESD</th>
-                                                            <th scope="col">Delay Code</th>
-                                                            <th scope="col">Recommendation</th>
-                                                          </tr>
-                                                        </thead>
-                                                        <tbody class="table-group-divider">
-                                                          <tr>
-                                                            <td>SP86963466</td>
-                                                            <td>59332413</td>
-                                                            <td>B5-1777</td>
-                                                            <td>20</td>
-                                                            <td>Wednesday, July 16, 2025</td>
-                                                            <td>Monday, July 21, 2025</td>
-                                                            <td>Unavailable</td>
-                                                            <td></td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>SP86963466</td>
-                                                            <td>59332413</td>
-                                                            <td>B5-1777</td>
-                                                            <td>20</td>
-                                                            <td>Wednesday, July 16, 2025</td>
-                                                            <td>Monday, July 21, 2025</td>
-                                                            <td>Unavailable</td>
-                                                            <td></td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>SP86963466</td>
-                                                            <td>59332413</td>
-                                                            <td>B5-1777</td>
-                                                            <td>20</td>
-                                                            <td>Wednesday, July 16, 2025</td>
-                                                            <td>Monday, July 21, 2025</td>
-                                                            <td>Unavailable</td>
-                                                            <td></td>
-                                                          </tr>
-                                                        </tbody>
-                                                      </table>
-                                                </div>
+                                                <table
+                                                    id="table"
+                                                    data-toggle="table"
+                                                    data-ajax="ajaxRequest"
+                                                    data-search="true"
+                                                    data-pagination="true">
+                                                    <thead>
+                                                        <tr>
+                                                        <th data-field="poNumber">PO Number</th>
+                                                        <th data-field="poDate">PO Date</th>
+                                                        <th data-field="customerName">Customer Name</th>
+                                                        <th data-field="supplier">Supplier</th>
+                                                        <th data-field="status">PO Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    </table>
                                             </div>
                                         </div>
                                     </div>
@@ -684,6 +654,12 @@
         <script src="https://code.highcharts.com/stock/highstock.js"></script>
         <script src="./assets/library/bootstrap-5.3.1/js/bootstrap.bundle.min.js"></script>
         <script src="./assets/js/customAssistant.js"></script>
+        <script src="./assets/library/bootstrap-table/bootstrap-table.min.js"></script>
+        <script>
+         
+
+
+          </script>
     </body>
 
 </html>

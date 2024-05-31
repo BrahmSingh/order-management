@@ -177,5 +177,19 @@
     a(".table-check .form-check-input").change(function() {
         a(".table-check .form-check-input:checked").length == a(".table-check .form-check-input").length ? a("#checkAll").prop("checked", !0) : a("#checkAll").prop("checked", !1)
     })
+
+
+        
 }(jQuery),
 feather.replace();
+
+// Ajax request for fetch PO Dashboard Data
+function ajaxRequest(params) {
+   const proxyURL = "https://cors-anywhere.herokuapp.com/";
+   const requestURL = "https://omstagingapi-ordermanagement.cp4bautomation-685c4d909dba5536870f4da931535b5a-0000.eu-de.containers.appdomain.cloud/temppo/pos";
+    $.getJSON(proxyURL + requestURL, function(data) {
+   //  console.log(data.instances);
+     const res = data.instances;
+     params.success(res)
+  })  
+}
