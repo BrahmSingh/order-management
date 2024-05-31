@@ -364,7 +364,7 @@ $(function () {
     },
 
     series: [{
-        name: 'Speed',
+        name: 'Sentiment',
         data: [50],
         tooltip: {
             valueSuffix: ' '
