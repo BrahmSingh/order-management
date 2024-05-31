@@ -367,7 +367,7 @@ $(function () {
         name: 'Sentiment',
         data: [50],
         tooltip: {
-            valueSuffix: ' '
+            valueSuffix: '%'
         },
         dataLabels: {
             format: '',
